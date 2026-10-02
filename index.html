@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Rebus — Guess the Movie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">MOVIE REBUS</div>
+        <h1>Guess the Movie 🎬</h1>
+      </div>
+      <button id="restartBtn" class="ghost-btn">Restart</button>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><span>Question</span><strong id="questionNo">1 / 100</strong></div>
+      <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+      <div class="stat"><span>Streak</span><strong id="streak">0 🔥</strong></div>
+      <div class="stat"><span>Lives</span><strong id="lives">❤️❤️❤️</strong></div>
+    </section>
+
+    <section class="game-card">
+      <div class="progress-track"><div id="progress" class="progress"></div></div>
+
+      <div class="round-head">
+        <span id="difficulty" class="badge">Easy</span>
+        <div class="timer-wrap">
+          <span>TIME</span>
+          <strong id="timer">15</strong>
+        </div>
+      </div>
+
+      <div class="clue-title">What movie do these pictures represent?</div>
+      <div id="clues" class="clues"></div>
+
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <div id="options" class="options"></div>
+
+      <button id="nextBtn" class="next-btn" disabled>Choose an answer</button>
+    </section>
+
+    <footer>
+      <span>100 puzzles • Picture rebus • Best score saved locally</span>
+    </footer>
+  </main>
+  <script src="puzzles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
